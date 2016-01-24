@@ -28,15 +28,19 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    
-  </head>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script> <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+    <script></script>
+
+</head>
   <body>
     <div class="home">
   <pre>{
   "<span class="hl string">name</span>": "<span class="hl string">Sahil Bhalla</span>",
   "<span class="hl string">email</span>": "<a href="mailto:sahilbhalla@sahilbhalla.me">sahilbhalla@sahilbhalla.me</a>",
-  "<span class="hl string">blog</span>": "<a href="">/posts/</a>",
-  "<span class="hl string">projects</span>": "<a href="">/projects/</a>",
+  "<span class="hl string">blog</span>": "<a href="#"   id = "yo">/posts/</a>",
+  "<span class="hl string">projects</span>": "<a href="#" id = "yo1">/projects/</a>",
+
   "<span class="hl string">resume</span>": "<a href="SuperUpdate.pdf">/resume.pdf</a>",
   "<span class="hl string">github</span>": "<a href="https://github.com/devilsahil">@devilsahil</a>",
       "<span class="hl string">linkedin</span>": "<a href="https://in.linkedin.com/in/sahil-bhalla-a717036b">Sahil Bhalla</a>",
@@ -58,8 +62,27 @@
         ga('send', 'pageview');
 
     </script>
+  <script>
 
 
-  
+      document.getElementById('yo').onclick = function(){
+          swal("Coming Soon!", "Check back in a week's time for more!");
+      }
 
-</body></html>
+
+  </script>
+
+    <script>
+
+
+        document.getElementById('yo1').onclick = function(){
+            swal("Coming Soon!", "Check back in a week's time for more!");
+        }
+
+
+    </script>
+
+
+
+
+  </body></html>
