@@ -1,0 +1,45 @@
+<html>
+<head></head>
+<body>
+<script src="http://cdn.pubnub.com/pubnub-3.7.1.min.js"></script>
+<script type="text/javascript" src="http://pubnub.github.io/eon/v/eon/0.0.10/eon.js"></script>
+<link type="text/css" rel="stylesheet" href="http://pubnub.github.io/eon/v/eon/0.0.10/eon.css"/>
+
+<div id="chart"></div>
+
+<script>
+var channel = 'hello-pi';
+
+
+
+
+var p = PUBNUB.init({
+  subscribe_key: 'sub-c-2aefee48-7b42-11e5-9720-0619f8945a4f',
+  publish_key:   'pub-c-0f41266b-2aea-4290-b86c-ecb4a2ebe84b'
+});
+
+
+// Subscribe to a channel
+ 
+ p.subscribe({
+    channel: 'hello-pi',
+    message: function(m){console.log(m)},
+    error: function (error) {
+      // Handle error here
+      console.log(JSON.stringify(error));
+    }
+ });
+
+
+
+
+  eon.chart({
+    channel: "hello-pi", // the pubnub channel for real time data
+    generate: {           // c3 chart object
+      bindto: '#chart'
+    }
+  });
+</script>
+</body>
+
+</html>
