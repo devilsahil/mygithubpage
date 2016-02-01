@@ -29,6 +29,15 @@ var pubnub = PUBNUB.init({
       console.log(JSON.stringify(error));
     }
  });
+ 
+  pubnub.subscribe({
+    channel: 'hello-pipi',
+    message: function(m1){console.log(m1)},
+    error: function (error) {
+      // Handle error here
+      console.log(JSON.stringify(error));
+    }
+ });
 
 
 
@@ -40,6 +49,15 @@ var pubnub = PUBNUB.init({
       bindto: '#chart'
     }
   });
+  
+  eon.chart({
+    pubnub: pubnub,
+    channel: "hello-pipi", // the pubnub channel for real time data
+    generate: {           // c3 chart object
+      bindto: '#chart'
+    }
+  });
+  
 </script>
 </body>
 
