@@ -13,7 +13,7 @@ var channel = 'hello-pi';
 
 
 
-var p = PUBNUB.init({
+var pubnub = PUBNUB.init({
   subscribe_key: 'sub-c-2aefee48-7b42-11e5-9720-0619f8945a4f',
   publish_key:   'pub-c-0f41266b-2aea-4290-b86c-ecb4a2ebe84b'
 });
@@ -21,7 +21,7 @@ var p = PUBNUB.init({
 
 // Subscribe to a channel
  
- p.subscribe({
+ pubnub.subscribe({
     channel: 'hello-pi',
     message: function(m){console.log(m)},
     error: function (error) {
