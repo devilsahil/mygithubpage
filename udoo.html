@@ -51,13 +51,28 @@ var pubnub = PUBNUB.init({
     }
   });
   
+
+  
   eon.chart({
     pubnub: pubnub,
-    channel: "hello-pipi", // the pubnub channel for real time data
-    generate: {           // c3 chart object
-      bindto: '#chart1'
+  channel: "hello-pipi",
+  generate: {
+    bindto: '#chart1',
+    data: {
+      type: 'gauge',
+    },
+    gauge: {
+      min: 0,
+      max: 100
+    },
+    color: {
+      pattern: ['#FF0000', '#F6C600', '#60B044'],
+      threshold: {
+        values: [30, 60, 90]
+      }
     }
-  });
+  }
+});
   
 </script>
 </body>
