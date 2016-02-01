@@ -6,6 +6,7 @@
 <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/0.0.10/eon.css"/>
 
 <div id="chart"></div>
+<div id="chart1"></div>
 
 <script>
 var channel = 'hello-pi';
@@ -54,7 +55,7 @@ var pubnub = PUBNUB.init({
     pubnub: pubnub,
     channel: "hello-pipi", // the pubnub channel for real time data
     generate: {           // c3 chart object
-      bindto: '#chart'
+      bindto: '#chart1'
     }
   });
   
