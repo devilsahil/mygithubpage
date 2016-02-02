@@ -1,3 +1,7 @@
+<!--ANTI THEFT DEVICE--DESIGNED AND DEVELOPED BY SAHIL BHALLA--> 
+<!--https://sahilbhalla.me-->
+
+
 <html>
 <head></head>
 <body>
@@ -5,15 +9,15 @@
 <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/0.0.10/eon.js"></script>
 <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/0.0.10/eon.css"/>
 
+<!--DO NOT MOVE THESE DIVS-->
 <div id="chart"></div>
 <div id="chart1"></div>
+<!--DO NOT MOVE THESE DIVS-->
 
 <script>
 var channel = 'hello-pi';
 
-
-
-
+//INITIALIZATION PARAMETERS FOR CHANNEL
 var pubnub = PUBNUB.init({
   subscribe_key: 'sub-c-2aefee48-7b42-11e5-9720-0619f8945a4f',
   publish_key:   'pub-c-0f41266b-2aea-4290-b86c-ecb4a2ebe84b'
@@ -52,7 +56,8 @@ var pubnub = PUBNUB.init({
   });
   
 
-  
+  //Oh God! This was definitely maddening! The params just don't seem to fit with the JSON Object data! Streams in console,but something's wrong!!
+  //Finally Done, took 6.5 hours of figuring out how to publish in python and retrieve in Javascript for EON Chart data..
   eon.chart({
     pubnub: pubnub,
   channel: "hello-pipi",
@@ -73,7 +78,7 @@ var pubnub = PUBNUB.init({
     }
   }
 });
-  
+  //I need food now, whoever is looking at this snippet, I'm looking at the clock and it's 4.30 a.m. Ugh, Pizza Hut definitely won't deliver now..
 </script>
 </body>
 
