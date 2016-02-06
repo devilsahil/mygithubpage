@@ -39,6 +39,49 @@
 
   <body id="page-top">
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.4.0/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define a command.
+  var commands1 = {
+    'accelerometer': function() {  document.getElementById("accel").click();  }
+	
+  };
+  var commands2 = {
+    'home': function() {  document.getElementById("home").click();  }
+	
+  };
+  var commands3 = {
+    'idea': function() {  document.getElementById("idea").click();  }
+	
+  };
+  var commands4 = {
+    'features': function() {  document.getElementById("features").click();  }
+	
+  };
+  var commands5 = {
+    'gyroscope': function() {  document.getElementById("gyro").click();  }
+	
+  };
+  var commands6 = {
+    'contact': function() {  document.getElementById("contac").click();  }
+	
+  };
+  // Add our commands to annyang
+  annyang.addCommands(commands1);
+  annyang.addCommands(commands2);
+  annyang.addCommands(commands3);
+  annyang.addCommands(commands4);
+  annyang.addCommands(commands5);
+  annyang.addCommands(commands6);
+  
+  
+  // Start listening.
+  annyang.start();
+}
+</script>
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -53,22 +96,22 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="">
-              <a class="page-scroll" href="#page-top">HOME</a>
+              <a class="page-scroll" href="#page-top" id="home">HOME</a>
             </li>
             <li class="">
-              <a class="page-scroll" href="#what">IDEA</a>
+              <a class="page-scroll" href="#what" id="idea">IDEA</a>
             </li>
             <li class="">
-              <a class="page-scroll" href="#why">Features and Components</a>
+              <a class="page-scroll" href="#why" id="features">Features and Components</a>
             </li>
             <li>
-              <a class="page-scroll" href="#ib-container">Accelerometer</a>
+              <a class="page-scroll" href="#ib-container" id="accel">Accelerometer</a>
             </li>
             <li>
-              <a class="page-scroll" href="#speakers">Gyroscope</a>
+              <a class="page-scroll" href="#speakers" id="gyro">Gyroscope</a>
             </li>
 			<li>
-              <a class="page-scroll" href="#contact">Contact Us</a>
+              <a class="page-scroll" href="#contact" id="contac">Contact Us</a>
             </li>
           </ul>
         </div>
